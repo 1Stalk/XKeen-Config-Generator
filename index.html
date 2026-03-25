@@ -215,6 +215,10 @@
                                         "shortId": params.get("sid") || "",    // Short ID
                                         "spiderX": params.get("spx") || "/"    // SpiderX
                                     } : undefined,
+                                    "grpcSettings": params.get("type") === "grpc" ? {
+                                        "serviceName": params.get("serviceName") || "",
+                                        "multiMode": params.get("mode") === "multi"
+                                    } : undefined,
                                     "wsSettings": params.get("type") === "ws" ? {
                                         "path": params.get("path") || "",
                                         "headers": {
